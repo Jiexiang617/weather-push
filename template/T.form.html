@@ -1,0 +1,18 @@
+{{ define "T.form" }}
+    <div class="form-group">
+        <label for="name">姓名</label>
+        <input type="text" class="form-control" id="name" name="username" value="{{ .Username }}" placeholder="请输入姓名">
+    </div>
+    <div class="form-group">
+        <label for="nickname">昵称</label>
+        <input type="text" class="form-control" id="nickname" name="nickname" value="{{ .Nickname }}" placeholder="请输入昵称，发送推送时会使用昵称">
+    </div>
+    <div class="form-group">
+        <label for="email">邮箱</label>
+        <input type="email" class="form-control" id="email"  name="email" value="{{ .Email }}" placeholder="请输入邮箱，天气信息会发送到此邮箱里面">
+    </div>
+    <div class="form-group">
+        <label for="address">地址</label>
+        <input type="text" class="form-control" id="address" name="address" value="{{ .Address }}" placeholder="请输入地址，如：成都、泸州、立石镇">
+    </div>
+{{ end }}

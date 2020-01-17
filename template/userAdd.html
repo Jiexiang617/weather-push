@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    {{ template "T.header"}}
+    <title>新增用户</title>
+</head>
+<body>
+{{ template "T.Nav" .active}}
+<div class="container">
+    {{ if .error }}
+        <div class="alert alert-danger alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            {{ .error }}
+        </div>
+    {{ end }}
+    <form action="/user/add" method="POST">
+        {{ template "T.form" }}
+        <input type="submit" class="btn btn-default" value="新增用户"/>
+    </form>
+</div>
+{{ template "T.footer"}}
+</body>
+</html>

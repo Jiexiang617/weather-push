@@ -1,4 +1,7 @@
 # Binaries for programs and plugins
+.idea
+.env
+data.db
 *.exe
 *.exe~
 *.dll
